@@ -1,4 +1,6 @@
 {
   "name": "VoiceAssistant",
-  "displayName": "VoiceAssistant"
+  "displayName": "Sesli Asistan",
+  "version": "1.0.0",
+  "description": "Speech-to-Text, Text-to-Speech ve ElevenLabs API Entegrasyonlu Sesli Asistan"
 }

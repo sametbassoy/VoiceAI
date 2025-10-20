@@ -105,6 +105,33 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    packaging {
+        pickFirst 'META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version'
+        pickFirst 'META-INF/androidx.versionedparcelable_versionedparcelable.version'
+        pickFirst 'META-INF/androidx.core_core.version'
+        pickFirst 'META-INF/androidx.appcompat_appcompat.version'
+        pickFirst 'META-INF/androidx.fragment_fragment.version'
+        pickFirst 'META-INF/androidx.drawerlayout_drawerlayout.version'
+        pickFirst 'META-INF/androidx.coordinatorlayout_coordinatorlayout.version'
+        pickFirst 'META-INF/androidx.customview_customview.version'
+        pickFirst 'META-INF/androidx.viewpager_viewpager.version'
+        pickFirst 'META-INF/androidx.slidingpanelayout_slidingpanelayout.version'
+        pickFirst 'META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version'
+        pickFirst 'META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version'
+        pickFirst 'META-INF/androidx.cursoradapter_cursoradapter.version'
+        pickFirst 'META-INF/androidx.documentfile_documentfile.version'
+        pickFirst 'META-INF/androidx.interpolator_interpolator.version'
+        pickFirst 'META-INF/androidx.loader_loader.version'
+        pickFirst 'META-INF/androidx.print_print.version'
+    }
+}
+
+configurations {
+    all {
+        exclude group: 'com.android.support', module: 'support-compat'
+        exclude group: 'com.android.support', module: 'versionedparcelable'
+    }
 }
 
 dependencies {
